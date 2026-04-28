@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenAI Sustainable Intelligence – Brochure</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest:    #1A3325;
+    --fern:      #2E5E3E;
+    --moss:      #4A7C5F;
+    --leaf:      #7BB88A;
+    --mist:      #C8DDD1;
+    --cream:     #F5F0E8;
+    --ivory:     #FAF7F2;
+    --charcoal:  #1E1E1E;
+    --slate:     #4A4A4A;
+    --citrus:    #C8A84B;
+    --citrus-lt: #E8C96A;
+    --white:     #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #D0D0C8;
+    color: var(--charcoal);
+  }
+
+  /* PAGE SHELL */
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 12mm auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 1
+  ══════════════════════════════════════════ */
+  .page-1 {
+    background: var(--forest);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  /* Organic background texture */
+  .page-1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 80% 15%, rgba(74,124,95,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 10% 85%, rgba(46,94,62,0.5) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Leaf vein SVG watermark */
+  .vein-bg {
+    position: absolute;
+    top: 0; right: -20mm;
+    width: 130mm;
+    height: 297mm;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  /* ── Header bar ── */
+  .p1-header {
+    position: relative;
+    z-index: 2;
+    padding: 9mm 12mm 7mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3mm solid rgba(200,221,209,0.2);
+  }
+
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+
+  .logo-hex {
+    width: 9mm; height: 9mm;
+    background: var(--citrus);
+    clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4.5mm; font-weight: 700; color: var(--forest);
+    font-family: 'DM Sans', sans-serif;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 5mm;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+  .logo-text span { color: var(--citrus); }
+
+  .header-tagline {
+    font-size: 2.8mm;
+    color: var(--mist);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  /* ── Hero ── */
+  .p1-hero {
+    position: relative;
+    z-index: 2;
+    padding: 10mm 12mm 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .eyebrow {
+    font-size: 2.8mm;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--citrus);
+    margin-bottom: 5mm;
+    font-weight: 500;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19mm;
+    font-weight: 300;
+    line-height: 0.92;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 4mm;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--citrus-lt);
+    font-weight: 300;
+  }
+
+  .hero-sub {
+    font-size: 4.5mm;
+    font-weight: 300;
+    color: var(--mist);
+    line-height: 1.5;
+    max-width: 120mm;
+    margin-bottom: 8mm;
+  }
+
+  .hero-divider {
+    width: 20mm;
+    height: 0.4mm;
+    background: linear-gradient(90deg, var(--citrus), transparent);
+    margin-bottom: 8mm;
+  }
+
+  .hero-promise {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5mm;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--leaf);
+    line-height: 1.6;
+    max-width: 140mm;
+    border-left: 0.6mm solid var(--citrus);
+    padding-left: 5mm;
+  }
+
+  /* ── 4 Pillars ── */
+  .p1-pillars {
+    position: relative;
+    z-index: 2;
+    padding: 7mm 12mm;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+  }
+
+  .pillar {
+    background: rgba(255,255,255,0.05);
+    border: 0.3mm solid rgba(200,221,209,0.18);
+    border-top: 1.2mm solid var(--citrus);
+    padding: 4mm 3.5mm;
+    border-radius: 0 0 1mm 1mm;
+  }
+
+  .pillar-icon {
+    font-size: 5mm;
+    margin-bottom: 2.5mm;
+    display: block;
+  }
+
+  .pillar-title {
+    font-size: 3mm;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5mm;
+  }
+
+  .pillar-body {
+    font-size: 2.8mm;
+    color: var(--mist);
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  /* ── Router diagram ── */
+  .p1-router {
+    position: relative;
+    z-index: 2;
+    margin: 0 12mm 8mm;
+    background: rgba(255,255,255,0.04);
+    border: 0.3mm solid rgba(200,221,209,0.15);
+    border-radius: 2mm;
+    padding: 5mm 6mm;
+  }
+
+  .router-label {
+    font-size: 2.8mm;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--citrus);
+    font-weight: 500;
+    margin-bottom: 4mm;
+  }
+
+  .router-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .rf-node {
+    flex: 1;
+    text-align: center;
+  }
+
+  .rf-box {
+    background: rgba(74,124,95,0.25);
+    border: 0.3mm solid rgba(123,184,138,0.4);
+    border-radius: 1.5mm;
+    padding: 3mm 2mm;
+    margin: 0 1.5mm;
+  }
+
+  .rf-box.input { background: rgba(200,168,75,0.15); border-color: rgba(200,168,75,0.45); }
+  .rf-box.output { background: rgba(30,30,30,0.4); border-color: rgba(200,221,209,0.2); }
+
+  .rf-label {
+    font-size: 2.4mm;
+    font-weight: 600;
+    color: var(--cream);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 1mm;
+  }
+
+  .rf-sub {
+    font-size: 2.1mm;
+    color: var(--mist);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .rf-arrow {
+    font-size: 3.5mm;
+    color: var(--citrus);
+    flex: 0 0 auto;
+    padding: 0 1mm;
+  }
+
+  /* ── Footer ── */
+  .p1-footer {
+    position: relative;
+    z-index: 2;
+    padding: 4mm 12mm;
+    background: rgba(0,0,0,0.25);
+    border-top: 0.3mm solid rgba(200,221,209,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .p1-footer-text {
+    font-size: 2.5mm;
+    color: var(--mist);
+    opacity: 0.7;
+  }
+
+  .p1-footer-pg {
+    font-size: 2.5mm;
+    color: var(--citrus);
+    font-weight: 500;
+  }
+
+  /* ══════════════════════════════════════════
+     PAGE 2
+  ══════════════════════════════════════════ */
+  .page-2 {
+    background: var(--ivory);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .page-2::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2mm;
+    background: linear-gradient(90deg, var(--forest), var(--moss), var(--citrus));
+  }
+
+  /* ── P2 Header ── */
+  .p2-header {
+    position: relative;
+    padding: 8mm 12mm 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3mm solid var(--mist);
+  }
+
+  .p2-logo {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+  }
+
+  .p2-logo-hex {
+    width: 8mm; height: 8mm;
+    background: var(--forest);
+    clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4mm; font-weight: 700; color: var(--citrus);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .p2-logo-text {
+    font-size: 4.5mm;
+    font-weight: 600;
+    color: var(--forest);
+  }
+  .p2-logo-text span { color: var(--moss); }
+
+  .p2-section-label {
+    font-size: 2.8mm;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--citrus);
+    font-weight: 500;
+  }
+
+  /* ── P2 Body ── */
+  .p2-body {
+    padding: 6mm 12mm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5mm;
+  }
+
+  /* Product modules table */
+  .modules-section {
+    grid-column: 1 / -1;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7.5mm;
+    font-weight: 600;
+    color: var(--forest);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5mm;
+    line-height: 1.1;
+  }
+
+  .section-lead {
+    font-size: 3.2mm;
+    color: var(--slate);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 155mm;
+    margin-bottom: 4mm;
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+  }
+
+  .module-card {
+    background: var(--white);
+    border: 0.3mm solid var(--mist);
+    border-radius: 2mm;
+    padding: 4mm 3.5mm;
+    border-top: 1.5mm solid var(--forest);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .module-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 12mm; height: 12mm;
+    background: radial-gradient(circle at bottom right, rgba(74,124,95,0.08), transparent);
+  }
+
+  .module-card:nth-child(2) { border-top-color: var(--moss); }
+  .module-card:nth-child(3) { border-top-color: var(--citrus); }
+  .module-card:nth-child(4) { border-top-color: var(--fern); }
+  .module-card:nth-child(5) { border-top-color: var(--leaf); }
+  .module-card:nth-child(6) { border-top-color: var(--citrus); }
+
+  .module-icon {
+    font-size: 5.5mm;
+    margin-bottom: 2mm;
+    display: block;
+  }
+
+  .module-name {
+    font-size: 3mm;
+    font-weight: 600;
+    color: var(--forest);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5mm;
+    line-height: 1.3;
+  }
+
+  .module-desc {
+    font-size: 2.7mm;
+    color: var(--slate);
+    font-weight: 300;
+    line-height: 1.55;
+  }
+
+  /* Why it matters + Bio intelligence */
+  .why-section {
+    grid-column: 1 / 2;
+    background: var(--forest);
+    border-radius: 2mm;
+    padding: 5mm;
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-section::before {
+    content: '';
+    position: absolute;
+    top: -5mm; right: -5mm;
+    width: 30mm; height: 30mm;
+    background: radial-gradient(circle, rgba(200,168,75,0.2), transparent 70%);
+  }
+
+  .why-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5mm;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 3mm;
+    line-height: 1.2;
+    position: relative; z-index: 1;
+  }
+
+  .why-list {
+    list-style: none;
+    position: relative; z-index: 1;
+  }
+
+  .why-list li {
+    font-size: 2.8mm;
+    font-weight: 300;
+    color: var(--mist);
+    line-height: 1.5;
+    margin-bottom: 2mm;
+    padding-left: 4mm;
+    position: relative;
+  }
+
+  .why-list li::before {
+    content: '✦';
+    position: absolute; left: 0;
+    color: var(--citrus);
+    font-size: 2.4mm;
+    top: 0.5mm;
+  }
+
+  /* Bio intelligence */
+  .bio-section {
+    grid-column: 2 / 3;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    border: 0.3mm solid var(--mist);
+    border-radius: 2mm;
+    padding: 5mm;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5mm;
+  }
+
+  .bio-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5mm;
+    font-weight: 600;
+    color: var(--forest);
+    line-height: 1.2;
+  }
+
+  .bio-text {
+    font-size: 2.8mm;
+    color: var(--slate);
+    font-weight: 300;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .bio-tiers {
+    display: flex;
+    gap: 2mm;
+    margin-top: 2mm;
+  }
+
+  .bio-tier {
+    flex: 1;
+    background: var(--cream);
+    border-radius: 1.5mm;
+    padding: 2.5mm 2mm;
+    text-align: center;
+    border: 0.3mm solid var(--mist);
+  }
+
+  .bio-tier-icon { font-size: 4mm; display: block; margin-bottom: 1mm; }
+  .bio-tier-label {
+    font-size: 2.2mm;
+    font-weight: 600;
+    color: var(--forest);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.5mm;
+  }
+  .bio-tier-sub {
+    font-size: 2mm;
+    color: var(--slate);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  /* ── CTA Banner ── */
+  .cta-banner {
+    margin: 0 12mm 5mm;
+    background: linear-gradient(100deg, var(--fern) 0%, var(--forest) 60%, #0F2318 100%);
+    border-radius: 2mm;
+    padding: 5mm 7mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -8mm; right: 20mm;
+    width: 40mm; height: 40mm;
+    background: radial-gradient(circle, rgba(200,168,75,0.25), transparent 65%);
+  }
+
+  .cta-left { position: relative; z-index: 1; }
+
+  .cta-tag {
+    font-size: 2.5mm;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--citrus);
+    font-weight: 500;
+    margin-bottom: 2mm;
+  }
+
+  .cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6mm;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .cta-headline em {
+    color: var(--citrus-lt);
+    font-style: italic;
+  }
+
+  .cta-right {
+    position: relative; z-index: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+    flex-shrink: 0;
+  }
+
+  .cta-contact {
+    font-size: 2.8mm;
+    color: var(--mist);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .cta-contact strong {
+    color: var(--white);
+    font-weight: 600;
+    display: block;
+  }
+
+  .cta-badge {
+    background: var(--citrus);
+    color: var(--forest);
+    font-size: 2.3mm;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 1.5mm 3mm;
+    border-radius: 0.8mm;
+    align-self: flex-end;
+  }
+
+  /* ── P2 Footer ── */
+  .p2-footer {
+    padding: 3.5mm 12mm;
+    background: var(--forest);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .p2-footer-left {
+    font-size: 2.4mm;
+    color: var(--mist);
+    opacity: 0.8;
+  }
+
+  .p2-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 5mm;
+  }
+
+  .footer-pill {
+    font-size: 2.2mm;
+    color: var(--mist);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.75;
+  }
+
+  .footer-pill span {
+    color: var(--citrus);
+    margin-right: 1mm;
+  }
+
+  .p2-footer-pg { font-size: 2.4mm; color: var(--citrus); font-weight: 500; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+    .page-2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 — Concept & Intelligence Router
+══════════════════════════════════════════ -->
+<div class="page page-1">
+
+  <!-- Leaf vein watermark -->
+  <svg class="vein-bg" viewBox="0 0 300 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M150 0 C150 350 150 350 150 700" stroke="white" stroke-width="1.5"/>
+    <path d="M150 80 C200 120 230 160 270 180" stroke="white" stroke-width="0.8"/>
+    <path d="M150 80 C100 120 70 160 30 180" stroke="white" stroke-width="0.8"/>
+    <path d="M150 160 C210 200 250 240 290 250" stroke="white" stroke-width="0.8"/>
+    <path d="M150 160 C90 200 50 240 10 250" stroke="white" stroke-width="0.8"/>
+    <path d="M150 260 C200 290 235 320 270 330" stroke="white" stroke-width="0.8"/>
+    <path d="M150 260 C100 290 65 320 30 330" stroke="white" stroke-width="0.8"/>
+    <path d="M150 370 C195 400 225 430 260 440" stroke="white" stroke-width="0.6"/>
+    <path d="M150 370 C105 400 75 430 40 440" stroke="white" stroke-width="0.6"/>
+    <path d="M150 470 C185 495 210 520 245 530" stroke="white" stroke-width="0.6"/>
+    <path d="M150 470 C115 495 90 520 55 530" stroke="white" stroke-width="0.6"/>
+    <path d="M150 570 C178 590 200 610 225 620" stroke="white" stroke-width="0.5"/>
+    <path d="M150 570 C122 590 100 610 75 620" stroke="white" stroke-width="0.5"/>
+  </svg>
+
+  <!-- Header -->
+  <div class="p1-header">
+    <div class="logo-mark">
+      <div class="logo-hex">G</div>
+      <div class="logo-text"><span>Green</span>AI Services</div>
+    </div>
+    <div class="header-tagline">Sustainable · Sovereign · Inclusive</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="p1-hero">
+    <div class="eyebrow">Introducing</div>
+    <div class="hero-title">Sustainable<br><em>Intelligence</em></div>
+    <div class="hero-sub">Right-Sized AI for Cost, Carbon, Compliance, and Control</div>
+    <div class="hero-divider"></div>
+    <div class="hero-promise">
+      "Not the biggest model. The right model."<br>
+      From AI adoption to AI accounting — GreenAI helps institutions know
+      where AI is used, how much it costs, how risky it is, and how it can be optimised.
+    </div>
+  </div>
+
+  <!-- 4 Pillars -->
+  <div class="p1-pillars">
+    <div class="pillar">
+      <span class="pillar-icon">💸</span>
+      <div class="pillar-title">Cost</div>
+      <div class="pillar-body">Eliminate over-provisioned frontier models for routine tasks. Reduce API-token spend and cloud bills dramatically.</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🌿</span>
+      <div class="pillar-title">Carbon</div>
+      <div class="pillar-body">Smaller, task-appropriate models consume less compute and energy, aligning AI operations with ESG commitments.</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🔒</span>
+      <div class="pillar-title">Compliance</div>
+      <div class="pillar-body">Sensitive data routed to edge or on-premise models by default. Audit logs and approval flows built in.</div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🎛️</span>
+      <div class="pillar-title">Control</div>
+      <div class="pillar-body">Human-in-the-loop review for high-risk decisions. Department-wise visibility into every AI interaction.</div>
+    </div>
+  </div>
+
+  <!-- Intelligence Router -->
+  <div class="p1-router">
+    <div class="router-label">⚡ The GreenAI Intelligence Router</div>
+    <div class="router-flow">
+      <div class="rf-node">
+        <div class="rf-box input">
+          <span class="rf-label">Task Input</span>
+          <span class="rf-sub">Any query, doc,<br>form, or workflow</span>
+        </div>
+      </div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-node">
+        <div class="rf-box">
+          <span class="rf-label">Classify</span>
+          <span class="rf-sub">Complexity · Sensitivity<br>Risk · Urgency</span>
+        </div>
+      </div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-node">
+        <div class="rf-box">
+          <span class="rf-label">Select Engine</span>
+          <span class="rf-sub">Rules / RAG / Small /<br>Domain / Edge / Frontier</span>
+        </div>
+      </div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-node">
+        <div class="rf-box">
+          <span class="rf-label">Validate</span>
+          <span class="rf-sub">Output quality check<br>+ escalation trigger</span>
+        </div>
+      </div>
+      <div class="rf-arrow">→</div>
+      <div class="rf-node">
+        <div class="rf-box output">
+          <span class="rf-label">Deliver</span>
+          <span class="rf-sub">Optimal result<br>with full audit trail</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="p1-footer">
+    <div class="p1-footer-text">GreenAI Services Pvt. Ltd. · Kolkata · Mumbai · DPIIT Recognised Startup</div>
+    <div class="p1-footer-pg">1 / 2</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 — Products, Why It Matters, CTA
+══════════════════════════════════════════ -->
+<div class="page page-2">
+
+  <!-- Header -->
+  <div class="p2-header">
+    <div class="p2-logo">
+      <div class="p2-logo-hex">G</div>
+      <div class="p2-logo-text"><span>Green</span>AI Sustainable Intelligence</div>
+    </div>
+    <div class="p2-section-label">Product Suite &amp; Benefits</div>
+  </div>
+
+  <!-- Body -->
+  <div class="p2-body">
+
+    <!-- Modules -->
+    <div class="modules-section">
+      <div class="section-heading">What GreenAI Delivers</div>
+      <div class="section-lead">Six integrated modules that take you from unchecked AI sprawl to accountable, optimised, and ESG-aligned AI operations.</div>
+      <div class="modules-grid">
+
+        <div class="module-card">
+          <span class="module-icon">🔍</span>
+          <div class="module-name">AI Usage &amp; Cost Audit</div>
+          <div class="module-desc">Identify unnecessary AI spending and model overuse across departments with a comprehensive usage baseline.</div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-icon">🗺️</span>
+          <div class="module-name">Sustainable Intelligence Blueprint</div>
+          <div class="module-desc">Map every task to its appropriate model tier and workflow. A strategic roadmap for Task–Model Proportionality.</div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-icon">⚡</span>
+          <div class="module-name">Intelligence Router</div>
+          <div class="module-desc">Automatically route tasks to the right AI layer — rules, retrieval, small model, domain model, edge, or frontier.</div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-icon">📊</span>
+          <div class="module-name">AI Accounting Dashboard</div>
+          <div class="module-desc">Track department-wise AI usage, token cost, model selection, risk exposure, and carbon proxy in real time.</div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-icon">🛡️</span>
+          <div class="module-name">Governance Layer</div>
+          <div class="module-desc">Audit logs, approval workflows, and human-in-the-loop review for high-risk or sensitive AI decisions.</div>
+        </div>
+
+        <div class="module-card">
+          <span class="module-icon">🌱</span>
+          <div class="module-name">ESG-Aligned AI Audit</div>
+          <div class="module-desc">Link AI operations directly to sustainability and compliance goals. GeM-ready packaging for public institutions.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Why it matters -->
+    <div class="why-section">
+      <div class="why-heading">Why It Matters</div>
+      <ul class="why-list">
+        <li>Reduce AI costs by routing routine tasks away from expensive frontier models</li>
+        <li>Improve data privacy with sensitive-task containment at the edge or on-premise</li>
+        <li>Lower avoidable compute and energy consumption across your AI estate</li>
+        <li>Strengthen auditability with full traceability of every AI-assisted decision</li>
+        <li>Align AI adoption with ESG and sustainability reporting obligations</li>
+        <li>GeM-ready modules for seamless government and PSU procurement</li>
+      </ul>
+    </div>
+
+    <!-- Bio Intelligence -->
+    <div class="bio-section">
+      <div class="bio-heading">Inspired by Biological Intelligence</div>
+      <div class="bio-text">Nature does not use the conscious brain for every function. Reflexes handle routine tasks; deep reasoning is reserved for complex, novel, or high-risk situations. GreenAI brings the same discipline to enterprise AI.</div>
+      <div class="bio-tiers">
+        <div class="bio-tier">
+          <span class="bio-tier-icon">⚙️</span>
+          <span class="bio-tier-label">Reflex</span>
+          <span class="bio-tier-sub">Rules &amp; retrieval for routine queries</span>
+        </div>
+        <div class="bio-tier">
+          <span class="bio-tier-icon">🧠</span>
+          <span class="bio-tier-label">Habit</span>
+          <span class="bio-tier-sub">Small &amp; domain models for familiar tasks</span>
+        </div>
+        <div class="bio-tier">
+          <span class="bio-tier-icon">💡</span>
+          <span class="bio-tier-label">Reason</span>
+          <span class="bio-tier-sub">Frontier models only for complex decisions</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="cta-left">
+      <div class="cta-tag">Get Started</div>
+      <div class="cta-headline">Begin with a free<br><em>AI Usage Audit</em></div>
+    </div>
+    <div class="cta-right">
+      <div class="cta-contact">
+        <strong>GreenAI Services Pvt. Ltd.</strong>
+        Kolkata (HQ) · Mumbai Branch
+      </div>
+      <div class="cta-contact">
+        reach@greenai.services<br>
+        greenai.services
+      </div>
+      <div class="cta-badge">DPIIT Recognised Startup</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="p2-footer">
+    <div class="p2-footer-left">© 2025 GreenAI Services Pvt. Ltd. All rights reserved.</div>
+    <div class="p2-footer-right">
+      <div class="footer-pill"><span>🌿</span> Sovereign AI</div>
+      <div class="footer-pill"><span>🌱</span> Green AI</div>
+      <div class="footer-pill"><span>🤝</span> Inclusive AI</div>
+    </div>
+    <div class="p2-footer-pg">2 / 2</div>
+  </div>
+</div>
+
+</body>
+</html>
