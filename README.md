@@ -1,1 +1,1 @@
-GreenAI Sustainable Intelligence Brochure
+## GreenAI Sustainable Intelligence Brochure
